@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    tools:context=".fragments.ProjectFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="15dp"
+        android:backgroundTint="@color/my_black1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--Image-->
+            <ImageView
+                android:id="@+id/projectImage"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/project" />
+
+            <!--Title-->
+            <TextView
+                android:id="@+id/projectTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/title"
+                android:textColor="@color/my_light_gray"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/projectImage"
+                app:layout_constraintStart_toEndOf="@+id/projectImage"
+                app:layout_constraintTop_toTopOf="@+id/projectImage"
+                app:layout_constraintVertical_bias="0.1" />
+
+            <!--Description-->
+            <TextView
+                android:id="@+id/projectDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/project_description"
+                android:textColor="@color/my_light_gray"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/projectTitle"
+                app:layout_constraintTop_toBottomOf="@+id/projectTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
